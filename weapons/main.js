@@ -17,13 +17,19 @@ function addWeapon(weapon) {
 
   $(`#weapon-${weapon.name}`).on('mouseenter', () => {
     $(`#weapon-${weapon.name} .bar`).addClass("extended")
-    setTimeout(() => {
-      $(`#weapon-${weapon.name} .bar`).append(`magazine: ${weapon.magazine}`)
-    }, 300)
+    $(`#weapon-${weapon.name} .bar`).append(`
+    <span style="display: none;">magazine: ${weapon.magazine}</span><br>
+    <span style="display: none;">damage: ${weapon.damage}</span><br>
+    <span style="display: none;">color: <span style="color: ${weapon.color}">${weapon.color}</span></span><br>
+    `)
+    $(`#weapon-${weapon.name} span`).fadeIn(300)
+
   })
 
   $(`#weapon-${weapon.name}`).on('mouseleave', () => {
     $(`#weapon-${weapon.name} .bar`).removeClass("extended")
-		$(`#weapon-${weapon.name} .bar`).html(`<div class="name">${weapon.name}</div>`)
+    $(`#weapon-${weapon.name} span`).fadeOut(300, () => {
+      $(`#weapon-${weapon.name} .bar`).html(`<div class="name">${weapon.name}</div>`)
+    })
   })
 }
