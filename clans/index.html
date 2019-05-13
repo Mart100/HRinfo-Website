@@ -1,18 +1,27 @@
 <html>
   <head>
     <title>HelmetRoyale Info</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+
     <link rel="shortcut icon" href="../favicon.png" type="image/png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+      <!-- LeafLet -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+      <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+
     <script src="main.js"></script>
     <link href="style.css" rel="stylesheet">
     <link href="../styles/nav.css" rel="stylesheet">
+
   </head>
   <body>
     <div id="nav">
       <a href="../">Home</a>
-      <a href="../weapons" class="selected">Weapons</a>
+      <a href="../weapons">Weapons</a>
       <a href="../map">Map</a>
-      <a href="../clans">Clans</a>
+      <a href="../clans" class="selected">Clans</a>
     </div>
     <div id="clans"></div>
   </body>
