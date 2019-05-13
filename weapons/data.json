@@ -115,8 +115,15 @@
   {
     "name": "Pickaxe",
     "damage": "15",
-    "image": "https://i.imgur.com/93SDNvn.pngas",
+    "image": "https://i.imgur.com/93SDNvn.png",
     "magazine": "Infinite",
     "color": "blue"
+  },
+  {
+    "name": "Doob",
+    "damage": "7",
+    "image": "https://i.imgur.com/W1tUJTt.png",
+    "magazine": "2",
+    "color": "pink"
   }
 ]
