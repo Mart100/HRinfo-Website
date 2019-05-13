@@ -8,10 +8,10 @@
   },
   {
     "name": "FireSpray",
-    "damage": "unknown",
-    "image": "unknown",
-    "magazine": "unknown",
-    "color": "unknown"
+    "damage": "5",
+    "image": "https://i.imgur.com/R3FmVyL.png",
+    "magazine": "30",
+    "color": "white"
   },
   {
     "name": "Pumpaction",
@@ -23,14 +23,14 @@
   },
   {
     "name": "Burster",
-    "damage": "unknown",
-    "image": "unknown",
-    "magazine": "unknown",
-    "color": "unknown"
+    "damage": "10",
+    "image": "https://i.imgur.com/Q27PS6Y.png",
+    "magazine": "13",
+    "color": "blue"
   },
   {
     "name": "Sawed-off",
-    "damage": "unknown",
+    "damage": "6",
     "image": "https://i.imgur.com/6IZeE4h.png",
     "magazine": "2",
     "color": "white"
@@ -40,7 +40,7 @@
     "damage": "10",
     "image": "https://i.imgur.com/LaMWt8R.png",
     "magazine": "15",
-    "color": "unknown"
+    "color": "blue"
   },
   {
     "name": "Pistol",
@@ -65,9 +65,65 @@
   },
   {
     "name": "Uzi",
-    "damage": "unknown",
+    "damage": "8",
     "image": "https://i.imgur.com/yat912r.png",
     "magazine": "22",
     "color": "white"
+  },
+  {
+    "name": "G-Launcher",
+    "damage": "32",
+    "image": "https://i.imgur.com/cUmLipQ.png",
+    "magazine": "8",
+    "color": "white"
+  },
+  {
+    "name": "Colt",
+    "damage": "18",
+    "image": "https://i.imgur.com/UH4mI1S.png",
+    "magazine": "6",
+    "color": "white"
+  },
+  {
+    "name": "Sledge",
+    "damage": "50",
+    "image": "https://i.imgur.com/iPGCI7h.png",
+    "magazine": "infinite",
+    "color": "purple"
+  },
+  {
+    "name": "Farmer",
+    "damage": "6",
+    "image": "https://i.imgur.com/q29k8NE.png",
+    "magazine": "5",
+    "color": "purple"
+  },
+  {
+    "name": "AK47",
+    "damage": "12",
+    "image": "https://i.imgur.com/E3ArSb9.png",
+    "magazine": "35",
+    "color": "blue"
+  },
+  {
+    "name": "Messenger",
+    "damage": "38",
+    "image": "https://i.imgur.com/YKQGDpq.png",
+    "magazine": "1",
+    "color": "blue"
+  },
+  {
+    "name": "Pickaxe",
+    "damage": "15",
+    "image": "https://i.imgur.com/93SDNvn.pngas",
+    "magazine": "Infinite",
+    "color": "blue"
+  },
+  {
+    "name": "Pickaxe",
+    "damage": "15",
+    "image": "https://i.imgur.com/93SDNvn.pngas",
+    "magazine": "Infinite",
+    "color": "blue"
   }
 ]
