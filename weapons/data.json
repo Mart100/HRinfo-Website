@@ -61,7 +61,7 @@
     "damage": "12",
     "image": "https://i.imgur.com/XWrdpCv.png",
     "magazine": "42",
-    "color": "purple"
+    "color": "pink"
   },
   {
     "name": "Uzi",
@@ -89,14 +89,14 @@
     "damage": "50",
     "image": "https://i.imgur.com/iPGCI7h.png",
     "magazine": "infinite",
-    "color": "purple"
+    "color": "pink"
   },
   {
     "name": "Farmer",
     "damage": "6",
     "image": "https://i.imgur.com/q29k8NE.png",
     "magazine": "5",
-    "color": "purple"
+    "color": "pink"
   },
   {
     "name": "AK47",
@@ -139,5 +139,40 @@
     "image": "https://i.imgur.com/bSI38ze.png",
     "magazine": "Infinite",
     "color": "white"
+  },
+  {
+    "name": "Rapidor",
+    "damage": "10",
+    "image": "https://i.imgur.com/GAjwPYZ.png",
+    "magazine": "30",
+    "color": "pink"
+  },
+  {
+    "name": "Bomber",
+    "damage": "25",
+    "image": "https://i.imgur.com/AdDHlMl.png",
+    "magazine": "6",
+    "color": "yellow"
+  },
+  {
+    "name": "Old MachineGun",
+    "damage": "12",
+    "image": "https://i.imgur.com/50N4BzN.png",
+    "magazine": "35",
+    "color": "blue"
+  },
+  {
+    "name": "Robin",
+    "damage": "unknown",
+    "image": "https://i.imgur.com/rdsQg3L.png",
+    "magazine": "1",
+    "color": "yellow"
+  },
+  {
+    "name": "Help me expand this list! Marto_0#1978",
+    "damage": "DM me (Marto_0#1978) with new data",
+    "image": "https://i.imgur.com/rS0qjIX.png",
+    "magazine": ".",
+    "color": "."
   }
 ]

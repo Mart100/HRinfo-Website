@@ -1,6 +1,8 @@
 $(() => {
   $.getJSON('./clans.json', (data) => {
     for(let clan of data) addClan(clan)
+
+    $('#clans').append(`<div style="color: white;" class="clan">DM me on discord (Marto_0#1978) to have your own clan added here!</div>`)
   })
 })
 
