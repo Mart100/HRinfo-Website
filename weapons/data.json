@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Drumgun",
+    "damage": "8",
+    "image": "https://i.imgur.com/gzYHleb.png",
+    "magazine": "32",
+    "color": "blue"
+  },
+  {
+    "name": "FireSpray",
+    "damage": "unknown",
+    "image": "unknown",
+    "magazine": "unknown",
+    "color": "unknown"
+  },
+  {
+    "name": "Pumpaction",
+    "damage": "7",
+    "image": "https://i.imgur.com/wjrtQFA.png",
+    "magazine": "6",
+    "color": "rose",
+    "mode": "shotgun"
+  },
+  {
+    "name": "Burster",
+    "damage": "unknown",
+    "image": "unknown",
+    "magazine": "unknown",
+    "color": "unknown"
+  },
+  {
+    "name": "Sawed-off",
+    "damage": "unknown",
+    "image": "https://i.imgur.com/6IZeE4h.png",
+    "magazine": "2",
+    "color": "white"
+  },
+  {
+    "name": "Martin",
+    "damage": "10",
+    "image": "https://i.imgur.com/LaMWt8R.png",
+    "magazine": "15",
+    "color": "unknown"
+  },
+  {
+    "name": "Pistol",
+    "damage": "8",
+    "image": "https://i.imgur.com/8Zsnh3V.png",
+    "magazine": "10",
+    "color": "white"
+  },
+  {
+    "name": "M4A1",
+    "damage": "10",
+    "image": "https://i.imgur.com/xFk17Wy.png",
+    "magazine": "25",
+    "color": "blue"
+  },
+  {
+    "name": "MachineGun",
+    "damage": "12",
+    "image": "https://i.imgur.com/XWrdpCv.png",
+    "magazine": "42",
+    "color": "purple"
+  },
+  {
+    "name": "Uzi",
+    "damage": "unknown",
+    "image": "https://i.imgur.com/yat912r.png",
+    "magazine": "22",
+    "color": "white"
+  }
+]
