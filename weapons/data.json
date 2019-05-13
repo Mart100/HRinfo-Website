@@ -125,5 +125,19 @@
     "image": "https://i.imgur.com/W1tUJTt.png",
     "magazine": "2",
     "color": "pink"
+  },
+  {
+    "name": "R-Launcher",
+    "damage": "48",
+    "image": "https://i.imgur.com/LYzr3Zt.png",
+    "magazine": "4",
+    "color": "white"
+  },
+  {
+    "name": "Sword",
+    "damage": "10",
+    "image": "https://i.imgur.com/bSI38ze.png",
+    "magazine": "Infinite",
+    "color": "white"
   }
 ]
