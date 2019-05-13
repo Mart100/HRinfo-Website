@@ -7,7 +7,7 @@ body {
 #clans {
   padding: 60px;
   position: absolute;
-  width: 500px;
+  width: 800px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -27,7 +27,7 @@ body {
 }
 .clan .desc {
   color: rgb(200, 200, 200);
-  font-size: 15px;
+  font-size: 13px;
   position: relative;
   bottom: 90px;
   left: 100px;
@@ -35,7 +35,7 @@ body {
 .clan .discord {
   position: relative;
   bottom: 140px;
-  left: 440px;
+  left: 740px;
 }
 .clan .discord img {
   width: 40px;

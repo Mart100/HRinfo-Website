@@ -190,6 +190,13 @@
     "color": "pink"
   },
   {
+    "name": "Twins",
+    "damage": "9",
+    "image": "https://i.imgur.com/Zh2t3C5.png",
+    "magazine": "44",
+    "color": "yellow"
+  },
+  {
     "name": "Help me expand this list! Marto_0#1978",
     "damage": "DM me (Marto_0#1978) with new data",
     "image": "https://i.imgur.com/rS0qjIX.png",
