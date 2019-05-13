@@ -14,11 +14,11 @@ body {
 }
 .container {
   width: auto;
-  display: inline-table;
+  display: inline-block;
   text-align: center;
   height: auto;
   padding: 30px;
-  margin: 40px;
+  margin: 20px;
   background-color: rgb(20, 20, 20);
   border-radius: 5px;
   color: white;
@@ -29,7 +29,9 @@ body {
   color: white;
 }
 
-
+#itemQuality img {
+  width: 400px;
+}
 #discordserver a img {
   width: 80px;
   height: 80px;
