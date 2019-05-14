@@ -1,13 +1,21 @@
 $(() => {
   $.getJSON('./data.json', (data) => {
+    // sort data
+    data.sort((a, b) => {
+      return a.name.localeCompare(b.name)
+    })
     for(let weapon of data) addWeapon(weapon)
   })
 })
 
 function addWeapon(weapon) {
+
+  let rgbColor = rarityToRGB(weapon.color)
+
+
   let html = `
   <div class="weapon" id="weapon-${weapon.name}">
-    <img src="${weapon.image}"/>
+    <img src="${weapon.image}" style="background-color: rgba(${rgbColor.toString()}, 0.5)"/>
     <div class="bar">
       <div class="name">${weapon.name}</div>
     </div>
@@ -20,7 +28,7 @@ function addWeapon(weapon) {
     $(`#weapon-${weapon.name} .bar`).append(`
     <span style="display: none;">magazine: ${weapon.magazine}</span><br>
     <span style="display: none;">damage: ${weapon.damage}</span><br>
-    <span style="display: none;">color: <span style="color: ${weapon.color}">${weapon.color}</span></span><br>
+    <span style="display: none;">color: <span style="color: rgb(${rgbColor.toString()})">${weapon.color}</span></span><br>
     `)
     $(`#weapon-${weapon.name} span`).fadeIn(300)
 
@@ -32,4 +40,15 @@ function addWeapon(weapon) {
       $(`#weapon-${weapon.name} .bar`).html(`<div class="name">${weapon.name}</div>`)
     })
   })
+}
+
+function rarityToRGB(rarity) {
+  let rgb = [0,0,0]
+
+  if(rarity == 'common') rgb = [162,162,162]
+  if(rarity == 'rare') rgb = [52,53,182]
+  if(rarity == 'unique') rgb = [163,28,171]
+  if(rarity == 'legendary') rgb = [204,139,25]
+
+  return rgb
 }
