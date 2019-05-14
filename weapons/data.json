@@ -2,205 +2,212 @@
   {
     "name": "Drumgun",
     "damage": "8",
-    "image": "https://i.imgur.com/gzYHleb.png",
+    "image": "https://i.imgur.com/nDkEoU0.png",
     "magazine": "32",
-    "color": "blue"
+    "color": "rare"
   },
   {
     "name": "FireSpray",
     "damage": "5",
-    "image": "https://i.imgur.com/R3FmVyL.png",
+    "image": "https://i.imgur.com/dijE0Al.png",
     "magazine": "30",
-    "color": "white"
+    "color": "common"
   },
   {
     "name": "Pumpaction",
     "damage": "7",
-    "image": "https://i.imgur.com/wjrtQFA.png",
+    "image": "https://i.imgur.com/G5CZ39v.png",
     "magazine": "6",
-    "color": "roze",
+    "color": "unique",
     "mode": "shotgun"
   },
   {
     "name": "Burster",
     "damage": "10",
-    "image": "https://i.imgur.com/Q27PS6Y.png",
+    "image": "https://i.imgur.com/7sWWZZF.png",
     "magazine": "13",
-    "color": "blue"
+    "color": "rare"
   },
   {
     "name": "Sawed-off",
     "damage": "6",
-    "image": "https://i.imgur.com/6IZeE4h.png",
+    "image": "https://i.imgur.com/RQQ7KXm.png",
     "magazine": "2",
-    "color": "white"
+    "color": "common"
   },
   {
     "name": "Martin",
     "damage": "10",
-    "image": "https://i.imgur.com/LaMWt8R.png",
+    "image": "https://i.imgur.com/cghxZn7.png",
     "magazine": "15",
-    "color": "blue"
+    "color": "rare"
   },
   {
     "name": "Pistol",
     "damage": "8",
-    "image": "https://i.imgur.com/8Zsnh3V.png",
+    "image": "https://i.imgur.com/dMaWi9d.png",
     "magazine": "10",
-    "color": "white"
+    "color": "common"
   },
   {
     "name": "M4A1",
     "damage": "10",
-    "image": "https://i.imgur.com/xFk17Wy.png",
+    "image": "https://i.imgur.com/Xw1KZrL.png",
     "magazine": "25",
-    "color": "blue"
+    "color": "rare"
   },
   {
     "name": "MachineGun",
     "damage": "12",
-    "image": "https://i.imgur.com/XWrdpCv.png",
+    "image": "https://i.imgur.com/tiPMCnR.png",
     "magazine": "42",
-    "color": "pink"
+    "color": "unique"
   },
   {
     "name": "Uzi",
     "damage": "8",
-    "image": "https://i.imgur.com/yat912r.png",
+    "image": "https://i.imgur.com/yZxX1Ja.png",
     "magazine": "22",
-    "color": "white"
+    "color": "common"
   },
   {
     "name": "G-Launcher",
     "damage": "32",
-    "image": "https://i.imgur.com/cUmLipQ.png",
+    "image": "https://i.imgur.com/atyfJaR.png",
     "magazine": "8",
-    "color": "white"
+    "color": "common"
   },
   {
     "name": "Colt",
     "damage": "18",
-    "image": "https://i.imgur.com/UH4mI1S.png",
+    "image": "https://i.imgur.com/tz3dSCZ.png",
     "magazine": "6",
-    "color": "white"
+    "color": "common"
   },
   {
     "name": "Sledge",
     "damage": "50",
     "image": "https://i.imgur.com/iPGCI7h.png",
     "magazine": "infinite",
-    "color": "pink"
+    "color": "unique"
   },
   {
     "name": "Farmer",
     "damage": "6",
-    "image": "https://i.imgur.com/q29k8NE.png",
+    "image": "https://i.imgur.com/rotuC1Z.png",
     "magazine": "5",
-    "color": "pink"
+    "color": "unique"
   },
   {
     "name": "AK47",
     "damage": "12",
-    "image": "https://i.imgur.com/E3ArSb9.png",
+    "image": "https://i.imgur.com/5j2qh5U.png",
     "magazine": "35",
-    "color": "blue"
+    "color": "rare"
   },
   {
     "name": "Messenger",
     "damage": "38",
     "image": "https://i.imgur.com/YKQGDpq.png",
     "magazine": "1",
-    "color": "blue"
+    "color": "rare"
   },
   {
     "name": "Pickaxe",
     "damage": "15",
     "image": "https://i.imgur.com/93SDNvn.png",
     "magazine": "Infinite",
-    "color": "blue"
+    "color": "rare"
   },
   {
     "name": "Doob",
     "damage": "7",
-    "image": "https://i.imgur.com/W1tUJTt.png",
+    "image": "https://i.imgur.com/klzxXgA.png",
     "magazine": "2",
-    "color": "pink"
+    "color": "unique"
   },
   {
     "name": "R-Launcher",
     "damage": "48",
-    "image": "https://i.imgur.com/LYzr3Zt.png",
+    "image": "https://i.imgur.com/5EeSYS8.png",
     "magazine": "4",
-    "color": "white"
+    "color": "common"
   },
   {
     "name": "Sword",
     "damage": "10",
     "image": "https://i.imgur.com/bSI38ze.png",
     "magazine": "Infinite",
-    "color": "white"
+    "color": "common"
   },
   {
     "name": "Rapidor",
     "damage": "10",
-    "image": "https://i.imgur.com/GAjwPYZ.png",
+    "image": "https://i.imgur.com/Tnzp3UZ.png",
     "magazine": "30",
-    "color": "pink"
+    "color": "unique"
   },
   {
     "name": "Bomber",
     "damage": "25",
-    "image": "https://i.imgur.com/AdDHlMl.png",
+    "image": "https://i.imgur.com/jxmFmOi.png",
     "magazine": "6",
-    "color": "yellow"
+    "color": "legendary"
   },
   {
     "name": "Old_MachineGun",
     "damage": "12",
-    "image": "https://i.imgur.com/50N4BzN.png",
+    "image": "https://i.imgur.com/k2V19O8.png",
     "magazine": "35",
-    "color": "blue"
+    "color": "rare"
   },
   {
     "name": "Robin",
     "damage": "unknown",
     "image": "https://i.imgur.com/rdsQg3L.png",
     "magazine": "1",
-    "color": "yellow"
+    "color": "legendary"
   },
   {
     "name": "Shortbow",
     "damage": "24",
     "image": "https://i.imgur.com/nwm70sE.png",
     "magazine": "1",
-    "color": "blue"
+    "color": "rare"
   },
   {
     "name": "FlameThrower",
     "damage": "5",
-    "image": "https://i.imgur.com/v6TzEzA.png",
+    "image": "https://i.imgur.com/YcCSKh7.png",
     "magazine": "70",
-    "color": "pink"
+    "color": "unique"
   },
   {
     "name": "Hydra",
     "damage": "8",
-    "image": "https://i.imgur.com/JaXtbXa.png",
+    "image": "https://i.imgur.com/zaIuMD2.png",
     "magazine": "20",
-    "color": "pink"
+    "color": "unique"
   },
   {
     "name": "Twins",
     "damage": "9",
-    "image": "https://i.imgur.com/Zh2t3C5.png",
+    "image": "https://i.imgur.com/itFuUI6.png",
     "magazine": "44",
-    "color": "yellow"
+    "color": "legendary"
   },
   {
-    "name": "Help me expand this list! Marto_0#1978",
-    "damage": "DM me (Marto_0#1978) with new data",
-    "image": "https://i.imgur.com/rS0qjIX.png",
-    "magazine": ".",
-    "color": "."
+    "name": "Doomsday",
+    "damage": "unknown",
+    "image": "https://i.imgur.com/M0aywBW.png",
+    "magazine": "unknown",
+    "color": "unknown"
+  },
+  {
+    "name": "Thinnozzle",
+    "damage": "unknown",
+    "image": "https://i.imgur.com/xz09cr5.png",
+    "magazine": "unknown",
+    "color": "unknown"
   }
 ]
