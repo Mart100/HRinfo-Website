@@ -163,7 +163,7 @@
   },
   {
     "name": "Robin",
-    "damage": "unknown",
+    "damage": "54",
     "image": "https://i.imgur.com/rdsQg3L.png",
     "magazine": "1",
     "color": "legendary"
@@ -198,16 +198,16 @@
   },
   {
     "name": "Doomsday",
-    "damage": "unknown",
+    "damage": "49",
     "image": "https://i.imgur.com/M0aywBW.png",
-    "magazine": "unknown",
-    "color": "unknown"
+    "magazine": "6",
+    "color": "legendary"
   },
   {
     "name": "Thinnozzle",
-    "damage": "unknown",
+    "damage": "4",
     "image": "https://i.imgur.com/xz09cr5.png",
-    "magazine": "unknown",
-    "color": "unknown"
+    "magazine": "78",
+    "color": "legendary"
   }
 ]
