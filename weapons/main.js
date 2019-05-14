@@ -28,7 +28,7 @@ function addWeapon(weapon) {
     $(`#weapon-${weapon.name} .bar`).append(`
     <span style="display: none;">magazine: ${weapon.magazine}</span><br>
     <span style="display: none;">damage: ${weapon.damage}</span><br>
-    <span style="display: none;">color: <span style="color: rgb(${rgbColor.toString()})">${weapon.color}</span></span><br>
+    <span style="display: none;">rarity: <span style="color: rgb(${rgbColor.toString()})">${weapon.color}</span></span><br>
     `)
     $(`#weapon-${weapon.name} span`).fadeIn(300)
 
