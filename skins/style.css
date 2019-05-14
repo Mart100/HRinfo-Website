@@ -1,0 +1,34 @@
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(30, 30, 30);
+}
+
+#skins {
+  padding: 100px 260px;
+}
+.skin {
+  display: inline-block;
+  margin: 20px;
+}
+.skin img {
+  width: 300px;
+  height: 300px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  background-color: rgb(0,0,0,0)
+}
+.skin .bar {
+  position: absolute;
+  color: white;
+  transform: translateY(-30px);
+  width: 300px;
+  height: 30px;
+  cursor: default;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.skin .bar .name {
+  font-size: 20px;
+  margin: 5px;
+}
