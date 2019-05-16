@@ -5,9 +5,9 @@ $(() => {
   let trackingCookie = getCookie('tracking')
   if(trackingCookie == undefined) {
     setCookie('tracking', true)
-    trackingCookie = true
+    trackingCookie = "true"
   }
-  
+
   if(trackingCookie == "true") {
     window.dataLayer = window.dataLayer || []
     function gtag(){dataLayer.push(arguments)}
