@@ -4,7 +4,7 @@ $(() => {
   // load google analytics
   let trackingCookie = getCookie('tracking')
   console.log('tracking: ', trackingCookie)
-  if(trackingCookie == undefined) {
+  if(trackingCookie == "") {
     setCookie('tracking', "true")
     trackingCookie = "true"
   }
