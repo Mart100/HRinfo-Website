@@ -23,18 +23,10 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140200727-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-140200727-1');
-    </script>
-
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="main.js"></script>
+    <script src="./scripts/cookies.js"></script>
     <link href="style.css" rel="stylesheet">
     <link href="./styles/nav.css" rel="stylesheet">
   </head>
@@ -70,9 +62,15 @@
         Support me making this site bigger and better!:<br>
         <a href="https://paypal.me/Martve">Paypal</a><br>
       </div>
-      <div id="paypalLink" class="container">
+      <div id="practiseAim" class="container">
         Practise your aim here:<br>
         <a href="https://mouseaccuracy.com/">Mouse Accuracy</a><br>
+      </div>
+      <div id="tracking" class="container">
+        This site uses google analytics, This helps the developer of this site a lot<br>
+        If you do not want to be tracked by google analytics.
+        Click here to opt-out:
+        <button onclick="optoutTracking()">opt-out</button>
       </div>
     </div>
   </body>
