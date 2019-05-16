@@ -3,8 +3,9 @@ $(() => {
 
   // load google analytics
   let trackingCookie = getCookie('tracking')
+  console.log('tracking: ', trackingCookie)
   if(trackingCookie == undefined) {
-    setCookie('tracking', true)
+    setCookie('tracking', "true")
     trackingCookie = "true"
   }
 
@@ -27,11 +28,11 @@ $(() => {
 
 
 function optoutTracking() {
-  setCookie('tracking', false)
+  setCookie('tracking', "false")
   location.reload()
 }
 
 function optinTracking() {
-  setCookie('tracking', true)
+  setCookie('tracking', "true")
   location.reload()
 }
