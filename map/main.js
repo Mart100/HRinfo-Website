@@ -23,8 +23,6 @@ $(() => {
 
   imageOverlayChestLocations = L.imageOverlay('chestLocations.png', bounds).addTo(map)
 
-
-
 })
 
 // controlPanel
