@@ -19,7 +19,8 @@
     "image": "https://i.imgur.com/G5CZ39v.png",
     "magazine": "6",
     "color": "unique",
-    "mode": "shotgun"
+    "type": "shotgun",
+    "pellets": "15"
   },
   {
     "name": "Burster",
@@ -33,14 +34,16 @@
     "damage": "6",
     "image": "https://i.imgur.com/RQQ7KXm.png",
     "magazine": "2",
-    "color": "common"
+    "color": "common",
+    "type": "shotgun"
   },
   {
     "name": "Martin",
     "damage": "10",
     "image": "https://i.imgur.com/cghxZn7.png",
     "magazine": "15",
-    "color": "rare"
+    "color": "rare",
+    "type": "bow"
   },
   {
     "name": "Pistol",
@@ -75,7 +78,8 @@
     "damage": "32",
     "image": "https://i.imgur.com/atyfJaR.png",
     "magazine": "8",
-    "color": "common"
+    "color": "common",
+    "type": "grenage-launcher"
   },
   {
     "name": "Colt",
@@ -89,14 +93,16 @@
     "damage": "50",
     "image": "https://i.imgur.com/iPGCI7h.png",
     "magazine": "infinite",
-    "color": "unique"
+    "color": "unique",
+    "type": "melee"
   },
   {
     "name": "Farmer",
     "damage": "6",
     "image": "https://i.imgur.com/rotuC1Z.png",
     "magazine": "5",
-    "color": "rare"
+    "color": "rare",
+    "type": "shotgun"
   },
   {
     "name": "AK47",
@@ -110,28 +116,33 @@
     "damage": "38",
     "image": "https://i.imgur.com/YKQGDpq.png",
     "magazine": "1",
-    "color": "rare"
+    "color": "rare",
+    "type": "bow"
   },
   {
     "name": "Pickaxe",
     "damage": "15",
     "image": "https://i.imgur.com/93SDNvn.png",
     "magazine": "Infinite",
-    "color": "rare"
+    "color": "rare",
+    "type": "melee"
   },
   {
     "name": "Doob",
     "damage": "7",
     "image": "https://i.imgur.com/klzxXgA.png",
     "magazine": "2",
-    "color": "unique"
+    "color": "unique",
+    "type": "shotgun",
+    "pellets": "15"
   },
   {
     "name": "R-Launcher",
     "damage": "48",
     "image": "https://i.imgur.com/5EeSYS8.png",
     "magazine": "4",
-    "color": "common"
+    "color": "common",
+    "type": "rocket-launcher"
   },
   {
     "name": "Sword",
@@ -152,7 +163,8 @@
     "damage": "25",
     "image": "https://i.imgur.com/jxmFmOi.png",
     "magazine": "6",
-    "color": "legendary"
+    "color": "legendary",
+    "type": "grenade-launcher"
   },
   {
     "name": "Old_MachineGun",
@@ -166,14 +178,16 @@
     "damage": "54",
     "image": "https://i.imgur.com/rdsQg3L.png",
     "magazine": "1",
-    "color": "legendary"
+    "color": "legendary",
+    "type": "bow"
   },
   {
     "name": "Shortbow",
     "damage": "24",
     "image": "https://i.imgur.com/nwm70sE.png",
     "magazine": "1",
-    "color": "rare"
+    "color": "rare",
+    "type": "bow"
   },
   {
     "name": "FlameThrower",

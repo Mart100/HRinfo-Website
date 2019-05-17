@@ -25,11 +25,17 @@ function addWeapon(weapon) {
 
   $(`#weapon-${weapon.name}`).on('mouseenter', () => {
     $(`#weapon-${weapon.name} .bar`).addClass("extended")
-    $(`#weapon-${weapon.name} .bar`).append(`
-    <span style="display: none;">magazine: ${weapon.magazine}</span><br>
-    <span style="display: none;">damage: ${weapon.damage}</span><br>
-    <span style="display: none;">rarity: <span style="color: rgb(${rgbColor.toString()})">${weapon.color}</span></span><br>
-    `)
+    let extraInfo = ``
+
+    extraInfo += `<span style="display: none;">magazine: ${weapon.magazine}</span><br>`
+    extraInfo += `<span style="display: none;">damage: ${weapon.damage}</span><br>`
+    extraInfo += `<span style="display: none;">rarity: <span style="color: rgb(${rgbColor.toString()})">${weapon.color}</span></span><br>`
+    extraInfo += `<span style="display: none;">type: ${weapon.type}</span><br>`
+    if(weapon.pellets != undefined) extraInfo += `<span style="display: none;">pellets: ${weapon.pellets}</span><br>`
+    $(`#weapon-${weapon.name} .bar`).append(extraInfo)
+    
+    
+    
     $(`#weapon-${weapon.name} span`).fadeIn(300)
 
   })

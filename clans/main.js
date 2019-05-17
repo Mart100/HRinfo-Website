@@ -14,7 +14,7 @@ $(() => {
     for(let clan of clans) addClan(clan)
   })
 
-  $('#clans').append(`<div style="color: white; text-align: center;" class="clan"><span style="position: relative; top: 25px;">To have your own clan added here, Invite this discord bot to you clan discord server!<br><a href="https://discordapp.com/oauth2/authorize?client_id=578905640181825556&permissions=67585&scope=bot">Bot invite</a></span></div>`)
+  $('#clans').append(`<div style="color: white; text-align: center;" class="clan"><span style="position: relative; top: 25px;">To have your own clan added here, Invite this discord bot to your clan discord server!<br><a href="https://discordapp.com/oauth2/authorize?client_id=578905640181825556&permissions=67585&scope=bot">Bot invite</a></span></div>`)
 })
 
 
