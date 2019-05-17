@@ -21,6 +21,7 @@ body {
 .weapon .bar {
   position: absolute;
   color: white;
+  text-align: center;
   transform: translateY(-30px);
   width: 400px;
   height: 30px;

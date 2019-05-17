@@ -17,9 +17,15 @@ body {
   position: absolute;
   left: 0px;
   width: 25%;
-  height: 100%;
+  height: calc(100% - 150px);
   background-color: rgb(25, 25, 25);
   color: white;
+  padding: 50px;
+  font-size: 30px;
+}
+
+#controlpanel input {
+  transform: scale(2);
 }
 
 #controlpanel #category {

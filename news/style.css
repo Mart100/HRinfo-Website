@@ -22,18 +22,18 @@ body {
 }
 .article .by {
   color: rgb(150, 150, 150);
-  font-size: 13px;
+  font-size: 16px;
   position: relative;
   left: 10px
 }
 .article .title {
   color: white;
-  font-size: 25px;
+  font-size: 28px;
   position: relative;
 }
 .article .text {
   color: rgb(200, 200, 200);
-  font-size: 12px;
+  font-size: 23px;
   position: relative;
   left: 5px;
 }

@@ -31,17 +31,17 @@ body {
 
 .tip .title {
   color: white;
-  font-size: 25px;
+  font-size: 30px;
   position: relative;
 }
 .tip .text {
   color: rgb(200, 200, 200);
-  font-size: 12px;
+  font-size: 17px;
   position: relative;
   left: 5px;
 }
 .tip .by {
   color: rgb(255, 200, 200);
   float: left;
-  font-size: 12px;
+  font-size: 15px;
 }
