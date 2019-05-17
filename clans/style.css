@@ -21,21 +21,21 @@ body {
 .clan .name {
   color: white;
   font-size: 20px;
-  position: relative;
-  bottom: 90px;
-  left: 100px;
+  position: absolute;
+  margin-top: 5px;
+  
 }
 .clan .desc {
   color: rgb(200, 200, 200);
   font-size: 13px;
-  position: relative;
-  bottom: 90px;
-  left: 100px;
+  position: absolute;
+  margin-top: 28px;
+  width: 60%;
 }
 .clan .discord {
   position: relative;
-  bottom: 140px;
-  left: 740px;
+  bottom: 45px;
+  left: 640px;
 }
 .clan .discord img {
   width: 40px;
@@ -53,7 +53,7 @@ body {
 
 .clan .memberCount {
   position: relative;
-  bottom: 130px;
+  bottom: 30px;
   color: white;
   width: 100px;
   left: 710px;

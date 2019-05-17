@@ -22,8 +22,8 @@ function addClan(clan) {
   let html = `
   <div class="clan" id="clan-${clan.name}">
     <img src="${clan.image}"/>
-    <div class="name">${clan.name}</div>
-    <div class="desc">${clan.desc}</div>
+    <span class="name">${clan.name}</span>
+    <span class="desc">${clan.desc}</span>
     <a class="discord" href="https://discord.gg/${clan.invite}"><img src="https://i.imgur.com/2lEoaBb.png"/></a>
     <div class="memberCount">Members: ${clan.memberCount}</div>
   </div>
