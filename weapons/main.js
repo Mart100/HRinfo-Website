@@ -10,7 +10,7 @@ $(() => {
 
 function addWeapon(weapon) {
 
-  let rgbColor = rarityToRGB(weapon.color)
+  let rgbColor = rarityToRGB(weapon.rarity)
 
 
   let html = `
@@ -29,7 +29,7 @@ function addWeapon(weapon) {
 
     extraInfo += `<span style="display: none;">magazine: ${weapon.magazine}</span><br><br>`
     extraInfo += `<span style="display: none;">damage: ${weapon.damage}</span><br><br>`
-    extraInfo += `<span style="display: none;">rarity: <span style="color: rgb(${rgbColor.toString()})">${weapon.color}</span></span><br><br>`
+    extraInfo += `<span style="display: none;">rarity: <span style="color: rgb(${rgbColor.toString()})">${weapon.rarity}</span></span><br><br>`
     extraInfo += `<span style="display: none;">type: ${weapon.type}</span><br><br>`
     if(weapon.pellets != undefined) extraInfo += `<span style="display: none;">pellets: ${weapon.pellets}</span><br>`
     $(`#weapon-${weapon.name} .bar`).append(extraInfo)
