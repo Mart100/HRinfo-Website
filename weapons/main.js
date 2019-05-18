@@ -1,12 +1,20 @@
+let firestore = firebase.firestore()
+
+// on page load
 $(() => {
-  $.getJSON('./data.json', (data) => {
-    // sort data
-    data.sort((a, b) => {
-      return a.name.localeCompare(b.name)
+
+  // read clans from database
+  firestore.collection("weapons").get().then((querySnapshot) => {
+    let weapons = []
+    querySnapshot.forEach((doc) => {
+      let data = doc.data()
+      weapons.push(data)
     })
-    for(let weapon of data) addWeapon(weapon)
+
+    for(let weapon of weapons) addWeapon(weapon)
   })
 })
+
 
 function addWeapon(weapon) {
 
