@@ -10,7 +10,7 @@ $(() => {
 function addPlayer(player, placement) {
   let html = `
   <div class="player">
-    <span class="placement">#${placement+1}: </span>
+    <span class="placement">#${Number(placement)+1}: </span>
     <span class="name">${player.username}</span>
     <span class="points">Points: ${player.points}</span>
   </div>
