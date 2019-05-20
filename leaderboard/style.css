@@ -36,8 +36,13 @@ body {
 .player .points {
   position: absolute;
   margin-left: 250px;
-  
 }
+
+.player .clan {
+  position: absolute;
+  margin-left: 400px;
+}
+
 #pageControl {
   height: 50px;
   width: 80%;

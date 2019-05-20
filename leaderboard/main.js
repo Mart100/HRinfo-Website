@@ -13,6 +13,7 @@ function addPlayer(player, placement) {
     <span class="placement">#${Number(placement)+1}: </span>
     <span class="name">${player.username}</span>
     <span class="points">Points: ${player.points}</span>
+    <span class="clan">Clan: ${player.clan}</span>
   </div>
   `
   $('#players').append(html)
