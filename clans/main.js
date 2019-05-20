@@ -37,4 +37,6 @@ function addClan(clan) {
   `
   $('#clans').append(html)
 
+  if(clan.invite == 'none') $(`#clan-${clan.name} .discord`).css('visibility', 'hidden')
+
 }
