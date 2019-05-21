@@ -22,6 +22,19 @@ body {
   width: 100%;
   background-color: rgb(20, 20, 20);
   color: white;
+  border-radius: 2px;
+}
+
+.player.first {
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
+.player.second {
+  background-color: rgba(192, 192, 192, 0.1);
+}
+
+.player.third {
+  background-color: rgba(205, 127, 50, 0.1);
 }
 
 .player .name {
@@ -43,28 +56,19 @@ body {
   margin-left: 400px;
 }
 
-#pageControl {
-  height: 50px;
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  background-color: rgb(15, 15, 15);
-  border-radius: 5px;
+.player .division {
+  position: absolute;
+  margin-left: 600px;
 }
-#pageControl img {
-  width: 40px;
-  height: 40px;
-  margin: 5px;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: .2s;
+
+.player .divisionIMG {
+  position: absolute;
+  margin-left: 670px;
 }
-#pageControl img:hover {
-  background-color: rgb(30, 30, 30);
-}
-#pageControl #leftArrow {
-  float: left;
-}
-#pageControl #rightArrow {
-  float: right;
+
+#leftSide {
+  left: 0px;
+  width: 500px;
+  height: 1500px;
+  position: absolute;
 }
