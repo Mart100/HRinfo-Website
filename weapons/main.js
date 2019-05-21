@@ -1,17 +1,13 @@
 let firestore = firebase.firestore()
 
+
 // on page load
 $(() => {
 
-  // read clans from database
-  firestore.collection("weapons").get().then((querySnapshot) => {
-    let weapons = []
-    querySnapshot.forEach((doc) => {
-      let data = doc.data()
-      weapons.push(data)
-    })
-
-    for(let weapon of weapons) addWeapon(weapon)
+  // read weapons from API
+  $.get('https://hrinfo-api.herokuapp.com/weapons', (data) => { 
+    let weapons = data
+    for(let i in weapons) addWeapon(weapons[i])
   })
 })
 
