@@ -1,0 +1,32 @@
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(30, 30, 30);
+}
+
+#profile {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  background-color: rgb(25, 25, 25);
+  width: 1000px;
+  height: 800px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#login {
+  position: relative;
+  text-align: center;
+  width: 200px;
+  color: white;
+  font-size: 18px;
+  background-color: rgb(114, 137, 218);
+  transition-duration: 0.5s;
+  height: 80px;
+  left: 400px;
+  top: 350px; 
+  line-height: 80px;
+  cursor: pointer;
+}
+#login:hover {
+  background-color: rgb(64, 87, 168);
+}
