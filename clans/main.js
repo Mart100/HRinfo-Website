@@ -1,17 +1,10 @@
-let firestore = firebase.firestore()
-
 // on page load
 $(() => {
 
   // read clans from database
-  firestore.collection("clans").get().then((querySnapshot) => {
-    let clans = []
-    querySnapshot.forEach((doc) => {
-      let data = doc.data()
-      clans.push(data)
-    })
-
-    for(let clan of clans) addClan(clan)
+  $.get('https://hrinfo-api.herokuapp.com/clans', (data) => { 
+    let clans = data
+    for(let i in clans) addClan(clans[i])
   })
 
   let text = `
