@@ -30,7 +30,7 @@ function loginDiscord() {
         .then(res => res.json())
         .then(response => {
           const { username, discriminator } = response;
-          console.log()`${username}#${discriminator}`)
+          console.log(`${username}#${discriminator}`)
         })
         .catch(console.error);
 
