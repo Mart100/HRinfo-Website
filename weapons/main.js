@@ -1,6 +1,3 @@
-let firestore = firebase.firestore()
-
-
 // on page load
 $(() => {
 
