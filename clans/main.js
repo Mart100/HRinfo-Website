@@ -25,7 +25,8 @@ function addClan(clan) {
     <span class="desc">${clan.desc}</span>
     <a class="discord" href="https://discord.gg/${clan.invite}"><img src="https://i.imgur.com/2lEoaBb.png"/></a>
     <span class="memberCount">Members: ${clan.memberCount}</span>
-    <span class="tag">TAG: ${clan.tag}</span>
+    <span class="tag">Tag: ${clan.tag}</span>
+    <span class="points">Points: ${clan.points}</span>
   </div>
   `
   $('#clans').append(html)
