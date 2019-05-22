@@ -15,6 +15,10 @@ body {
   display: flex;
   align-content: center;
   flex-flow: row wrap;
+  overflow: auto;
+  padding-right: calc(100% - 1465px);
+  padding-left: calc(100% - 1465px);
+  height: calc(100% - 50px);
 }
 .container {
   width: auto;
@@ -40,4 +44,23 @@ body {
 #discordserver a img {
   width: 80px;
   height: 80px;
+}
+
+#advertisements div {
+  position: absolute;
+  width: 400px;
+  background-color: rgb(20, 20, 20);
+  border-radius: 5px;
+  border: black 1px solid;
+  height: 600px;
+}
+
+#ad-1 {
+  top: 200px;
+  left: 0px;
+}
+
+#ad-2 {
+  top: 200px;
+  right: 0px;
 }
