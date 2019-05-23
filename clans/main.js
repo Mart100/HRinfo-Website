@@ -77,7 +77,7 @@ function showClanFull(clanID) {
     let token = getCookie('token')
     let id = token.split('-')[0]
     let stoken = token.split('-')[1]
-    console.log(token, id)
+    console.log(stoken, id)
     if(token == '') return window.location.href = '../login'
     else {
       leaveClan(id, stoken)
@@ -88,7 +88,7 @@ function showClanFull(clanID) {
           type: 'POST',
           url: 'https://hrinfo-api.herokuapp.com/updateplayer'
         })
-        location.reload()
+        //location.reload()
       }, 1000)
     }
   })
