@@ -77,6 +77,7 @@ function showClanFull(clanID) {
     let token = getCookie('token')
     let id = token.split('-')[0]
     token = token.split('-')[1]
+    console.log(token, id)
     if(token == '') window.location.href = '../login'
     else {
       leaveClan(id, token)
