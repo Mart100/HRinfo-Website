@@ -76,15 +76,15 @@ function showClanFull(clanID) {
   $('#joinclan').on('click', () => {
     let token = getCookie('token')
     let id = token.split('-')[0]
-    token = token.split('-')[1]
+    let stoken = token.split('-')[1]
     console.log(token, id)
-    if(token == '') window.location.href = '../login'
+    if(token == '') return window.location.href = '../login'
     else {
       leaveClan(id, token)
       setTimeout(() => {
         $.ajax({
           contentType: 'application/json',
-          data: JSON.stringify({ "id": id, "what": "clan", "to": clan.name, "token": token }),
+          data: JSON.stringify({ "id": id, "what": "clan", "to": clan.name, "token": stoken }),
           type: 'POST',
           url: 'https://hrinfo-api.herokuapp.com/updateplayer'
         })
