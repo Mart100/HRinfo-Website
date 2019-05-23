@@ -74,7 +74,19 @@ function showClanFull(clanID) {
   showOverview()
 
   $('#joinclan').on('click', () => {
-    
+    let token = getCookie('token')
+    if(token == '') window.location.href = '../login'
+    else {
+      leaveClan(token)
+      setTimeout(() => {
+        $.ajax({
+          contentType: 'application/json',
+          data: JSON.stringify({ "id": id, "what": "clan", "to": clan.name, "token": token }),
+          type: 'POST',
+          url: 'https://hrinfo-api.herokuapp.com/updateplayer'
+        })
+      }, 500)
+    }
   })
 
 }
@@ -131,4 +143,13 @@ function showOverview() {
   $('#bottom').append(`<span>Points: ${clan.points}</span><br>`)
   $('#bottom').append(`<span>Discord members: ${clan.discordMemberCount}</span><br>`)
   $('#bottom').append(`<span>Members: ${clan.members.length}</span>`)
+}
+
+function leaveClan(token) {
+  $.ajax({
+    contentType: 'application/json',
+    data: JSON.stringify({ "id": id, "what": "clan", "to": "none", "token": token }),
+    type: 'POST',
+    url: 'https://hrinfo-api.herokuapp.com/updateplayer'
+  })
 }
