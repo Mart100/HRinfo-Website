@@ -80,7 +80,7 @@ function showClanFull(clanID) {
     console.log(token, id)
     if(token == '') return window.location.href = '../login'
     else {
-      leaveClan(id, token)
+      leaveClan(id, stoken)
       setTimeout(() => {
         $.ajax({
           contentType: 'application/json',
