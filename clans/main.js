@@ -76,8 +76,10 @@ function showClanFull(clanID) {
   $('#joinclan').on('click', () => {
     let token = getCookie('token')
     if(token == '') window.location.href = '../login'
+    let id = token.split('-')[0]
+    token = token.split('-')[1]
     else {
-      leaveClan(token)
+      leaveClan(id, token)
       setTimeout(() => {
         $.ajax({
           contentType: 'application/json',
@@ -146,7 +148,7 @@ function showOverview() {
   $('#bottom').append(`<span>Members: ${clan.members.length}</span>`)
 }
 
-function leaveClan(token) {
+function leaveClan(id, token) {
   $.ajax({
     contentType: 'application/json',
     data: JSON.stringify({ "id": id, "what": "clan", "to": "none", "token": token }),
