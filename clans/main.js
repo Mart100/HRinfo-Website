@@ -75,9 +75,9 @@ function showClanFull(clanID) {
 
   $('#joinclan').on('click', () => {
     let token = getCookie('token')
-    if(token == '') window.location.href = '../login'
     let id = token.split('-')[0]
     token = token.split('-')[1]
+    if(token == '') window.location.href = '../login'
     else {
       leaveClan(id, token)
       setTimeout(() => {
