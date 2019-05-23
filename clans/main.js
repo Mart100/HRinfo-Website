@@ -85,6 +85,7 @@ function showClanFull(clanID) {
           type: 'POST',
           url: 'https://hrinfo-api.herokuapp.com/updateplayer'
         })
+        location.reload()
       }, 500)
     }
   })
