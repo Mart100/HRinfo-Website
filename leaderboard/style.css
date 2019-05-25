@@ -42,6 +42,11 @@ body {
   margin-left: 50px;
 }
 
+.player .name a {
+  text-decoration: none;
+  color: rgb(200, 255, 255);
+}
+
 .player .placement {
   position: absolute;
 }
@@ -54,6 +59,10 @@ body {
 .player .clan {
   position: absolute;
   margin-left: 400px;
+}
+.player .clan a {
+  text-decoration: none;
+  color: rgb(200, 200, 255);
 }
 
 .player .division {

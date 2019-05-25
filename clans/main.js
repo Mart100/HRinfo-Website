@@ -14,7 +14,9 @@ $(() => {
   // read clans from database
   $.get('https://hrinfo-api.herokuapp.com/clans', (data) => { 
     clans = data
-    for(let i in clans) addClan(clans[i])
+
+    let sortedClans = Object.values(clans).sort((a, b) => clanPointFunc(b) - clanPointFunc(a))
+    for(let i in sortedClans) addClan(sortedClans[i])
     if(clanParam != '') showClanFull(clanParam)
   })
 
@@ -27,6 +29,14 @@ $(() => {
   $('#clans').append(`<div style="color: white; text-align: center;" class="clan">${text}</div>`)
 })
 
+function clanPointFunc(clan) {
+  let points = 0
+  points += clan.members.length * 100
+  points += clan.points
+  points += clan.discordMemberCount
+  points += Number(clan.verified)*500
+  return points
+}
 
 function addClan(clan) {
   let html = `
@@ -34,8 +44,8 @@ function addClan(clan) {
     <img src="${clan.image}"/>
     <span class="name">${clan.name}</span>
     <span class="desc">${clan.desc}</span>
-    <a class="discord" href="https://discord.gg/${clan.invite}"><img src="https://i.imgur.com/2lEoaBb.png"/></a>
-    <span class="memberCount">Members: ${clan.memberCount}</span>
+    <span class="memberCount">Members: ${clan.members.length}</span>
+    <span class="discordMembers">Discord Members: ${clan.discordMemberCount}</span>
     <span class="tag">Tag: ${clan.tag}</span>
     <span class="points">Points: ${clan.points}</span>
   </div>
