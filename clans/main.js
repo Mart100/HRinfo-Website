@@ -104,25 +104,10 @@ function showClanFull(clanID) {
   })
 
 }
-function showMembers() {
+async function showMembers() {
 
-  // if players undefined
-  if(players == undefined) {
-    $.get('https://hrinfo-api.herokuapp.com/players', (data) => { 
-      players = data
-      showMembers()
-    })
-    return
-  }
-
-  // if divisions undefined
-  if(divisions == undefined) {
-    $.get('https://hrinfo-api.herokuapp.com/divisions', (data) => { 
-      divisions = data
-      showMembers()
-    })
-    return
-  }
+  players = await getPlayers()
+  divisions = await getDivisions()
 
 
   $('#navC span').removeClass('selected')
@@ -133,7 +118,7 @@ function showMembers() {
   // add players
 
   let sortedPlayers = Object.values(players).sort((a, b) => b.points-a.points)
-  let filteredPlayers = sortedPlayers.filter((p) => p.clan == clan.name )
+  let filteredPlayers = sortedPlayers.filter((p) => p.clan == clan.id )
 
   for(let i in filteredPlayers) {
     let player = filteredPlayers[i]
