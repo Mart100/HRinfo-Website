@@ -95,11 +95,11 @@ body {
 
 #profile #joinclan {
   position: absolute;
-  margin-left: 790px;
+  margin-left: 760px;
   margin-top: -175px;
   padding: 20px 50px;
   line-height: 10px;
-  width: 80px;
+  width: 110px;
   border-radius: 5px;
   border: 1px solid red;
   text-align: center;

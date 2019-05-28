@@ -68,7 +68,7 @@ function showClanFull(clanID) {
       <div id="top">
         <img id="image" src="${clan.image}" />
         <div id="name">${clan.name}</div>
-        <div id="joinclan">Join clan</div>
+        <div id="joinclan">Join discord</div>
       </div>
       <div id="navC">
         <span class="overview" onclick="showOverview()">Overview</span>
@@ -84,6 +84,8 @@ function showClanFull(clanID) {
   showOverview()
 
   $('#joinclan').on('click', () => {
+    window.location.href = `https://discord.gg/${clan.invite}`
+    /*
     let token = getCookie('token')
     let id = token.split('-')[0]
     let stoken = token.split('-')[1]
@@ -100,7 +102,7 @@ function showClanFull(clanID) {
         })
         //location.reload()
       }, 1000)
-    }
+    }*/
   })
 
 }
