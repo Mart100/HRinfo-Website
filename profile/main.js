@@ -6,11 +6,6 @@ async function onload() {
   // get players
   players = await getPlayers()
 
-  // see if player in params
-  let params = window.location.search.substr(1)
-  let playerParam = params.replace('player=', '')
-  if(playerParam != "") viewPlayer(playerParam)
-
   // see if token cookie
   let tokenCookie = getCookie('token')
   console.log(tokenCookie)
@@ -19,6 +14,11 @@ async function onload() {
     console.log(id)
     viewPlayer(id)
   }
+
+  // see if player in params
+  let params = window.location.search.substr(1)
+  let playerParam = params.replace('player=', '')
+  if(playerParam != "") viewPlayer(playerParam)
 
   // on search enter
   $('#search').on('keypress', (event) => {
