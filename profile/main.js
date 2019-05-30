@@ -96,6 +96,7 @@ async function viewPlayerStatistics() {
 }
 
 async function viewPlayerOverview() {
+  let player = viewingP
   // update nav
   $('#navP span').removeClass('selected')
   $('#navP #navOverview').addClass('selected')
