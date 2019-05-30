@@ -147,7 +147,7 @@ async function viewPlayerImprovement() {
           data: KperGame
         },
         {
-          label: 'Win Lose rate %',
+          label: 'Win rate %',
           backgroundColor: '#69FF46',
           borderColor: 'green',
           fill: false,
