@@ -15,3 +15,15 @@ function getDivisions() {
     $.get('https://hrinfo-api.herokuapp.com/divisions', (data) => { resolve(data) })
   })
 }
+
+function getPlayerCurrentStats(userID) {
+  return new Promise((resolve, reject) => {
+    $.get(`https://api.helmetroyale.io/stats?userId=${userID}`, (data) => { resolve(data) })
+  })
+}
+
+function getPlayerAllStats(id) {
+  return new Promise((resolve, reject) => {
+    $.get(`https://hrinfo-api.herokuapp.com/playerstats?id=${id}`, (data) => { resolve(data) })
+  })
+}

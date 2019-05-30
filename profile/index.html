@@ -9,6 +9,9 @@
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140200727-1"></script>
+
+    <!-- Chart.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
     
     <script src="../scripts/stringScore.js"></script>
     <script src="../scripts/database.js"></script>
@@ -33,7 +36,13 @@
     </div>
     <div id="profile" style="display: none;">
       <div id="top">
+        <img id="picture" src="https://i.imgur.com/6OUFdrQ.png">
         <div id="username"></div>
+      </div>
+      <div id="navP">
+        <span id="navOverview" onclick="viewPlayerOverview()" class="selected">Overview</span>
+        <span id="navStatistics" onclick="viewPlayerStatistics()">Statistics</span>
+        <span id="navImprovement" onclick="viewPlayerImprovement()">Improvement</span>
       </div>
       <div id="bottom">
 
