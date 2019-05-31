@@ -136,6 +136,12 @@ body {
   height: 30px;
   font-size: 30px;
 }
+#profile #bottom {
+  overflow: auto;
+  height: 450px;
+  width: 1000px;
+  position: absolute;
+}
 
 #profile #image {
   width: 80px;

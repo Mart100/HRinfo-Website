@@ -2,6 +2,8 @@ body {
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(30, 30, 30);
+  text-align: center;
+  overflow-x: hidden;
 }
 
 #content {
@@ -54,12 +56,64 @@ body {
   height: 600px;
 }
 
-#ad-1 {
-  top: 200px;
-  left: 0px;
+#content1 {
+  width: 80%;
+  margin: auto;
+}
+#content1 hr {
+  color: white;
 }
 
-#ad-2 {
-  top: 200px;
-  right: 0px;
+
+/*========CONTAINER1========*/
+.container1 {
+  height: 300px;
+}
+.container1 img {
+  height: 250px;
+  position: relative;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .7);
+  left: 200px;
+  bottom: 50px;
+}
+.container1 .title {
+  color: white;
+  font-size: 25px;
+  position: relative;
+  top: 75px;
+  right: 200px;
+}
+.container1 .desc {
+  color: white;
+  top: 100px;
+  right: 200px;
+  font-size: 17px;
+  position: relative;
+}
+
+
+/*========CONTAINER2========*/
+.container2 {
+  height: 300px;
+}
+.container2 img {
+  height: 250px;
+  position: relative;
+  box-shadow: -3px 3px 10px rgba(0, 0, 0, .7);
+  right: 200px;
+  bottom: 50px;
+}
+.container2 .title {
+  color: white;
+  font-size: 25px;
+  position: relative;
+  top: 75px;
+  left: 200px;
+}
+.container2 .desc {
+  color: white;
+  top: 100px;
+  left: 200px;
+  font-size: 17px;
+  position: relative;
 }
