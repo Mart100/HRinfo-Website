@@ -15,6 +15,7 @@
   color: white;
   text-decoration: none;
   transition-duration: .5s;
+  cursor: pointer;
   border-bottom: 4px solid rgba(0, 0, 0, 0);
   border-top: 4px solid rgba(0, 0, 0, 0);
 }
@@ -27,4 +28,30 @@
 #nav a:hover {
   border-bottom: 4px solid rgb(255, 0, 0);
   border-top: 4px solid rgba(0, 0, 0, 0);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 150px;
+  z-index: 10;
+  background-color: rgb(20, 20, 20);
+}
+
+.dropdown-content a {
+  float: none;
+  display: block !important;
+  text-align: left !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  border-right: 4px solid rgba(0, 0, 0, 0);
+  border-left: 4px solid rgba(0, 0, 0, 0);
+}
+.dropdown-content a:hover {
+  border-left: 4px solid rgb(255, 0, 0);
+  border-right: 4px solid rgba(0, 0, 0, 0);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
