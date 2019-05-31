@@ -1,5 +1,5 @@
 let playingCount
-let ctx
+let chart
 
 $(() => { load() })
 
@@ -7,10 +7,6 @@ async function load() {
 
   // select All Time
   $('#AT').addClass('selected')
-
-  // get ctx
-  let canvas = document.getElementById('graph')
-  ctx = canvas.getContext('2d')
 
   // on sidenav click
   $('#sidenav span').on('click', (event) => {
@@ -72,8 +68,18 @@ function refineData(unrefinedData) {
   return {data: data, timeStamps: timeStamps}
 }
 
-function createGraph(data, labels) {
-  let myLineChart = new Chart(ctx, {
+function createGraph(data, timeStamps) {
+  // timeStamps to labels
+  let labels = []
+  let currentTime = Math.floor(Date.now() / (1000*60*10))
+  for(let i in timeStamps) labels.push(((currentTime - timeStamps[i]) * 10) + 'm ago')
+
+  if(chart != undefined) chart.destroy()
+
+  // get ctx
+  let ctx = document.getElementById('graph').getContext('2d')
+
+  chart = new Chart(ctx, {
     type: 'line',
     data: {
       labels: labels,
@@ -106,6 +112,16 @@ function createGraph(data, labels) {
         data: data.sa
       }]
     },
-    options: {}
+    options: {
+      maintainAspectRatio: false,
+      scales: {
+        xAxes: [{
+          ticks: {
+            autoSkip: true,
+            maxTicksLimit: 10
+          }
+        }]
+      }
+    }
   })
 }
