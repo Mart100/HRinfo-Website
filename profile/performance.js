@@ -1,9 +1,9 @@
 let trackedStats
 
-async function viewPlayerImprovement() {
+async function viewPlayerPerformance() {
   // update nav
   $('#navP span').removeClass('selected')
-  $('#navP #navImprovement').addClass('selected')
+  $('#navP #navPerformance').addClass('selected')
   $('#bottom').html('')
 
   trackedStats = await getPlayerAllStats(viewingP.id)
