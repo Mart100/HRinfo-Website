@@ -27,3 +27,9 @@ function getPlayerAllStats(id) {
     $.get(`https://hrinfo-api.herokuapp.com/playerstats?id=${id}`, (data) => { resolve(data) })
   })
 }
+
+function getPlayingCount() {
+  return new Promise((resolve, reject) => {
+    $.get(`https://hrinfo-api.herokuapp.com/playingcount`, (data) => { resolve(data) })
+  })
+}
