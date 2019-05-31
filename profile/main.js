@@ -84,10 +84,12 @@ async function viewPlayerStatistics() {
   $('#navP span').removeClass('selected')
   $('#navP #navStatistics').addClass('selected')
   $('#bottom').html('')
+
+  gameNotConnected()
   
   let stats = await getPlayerCurrentStats(viewingP.gameID)
 
-  console.log(stats)
+  $('#bottom').html('')
   $('#bottom').append(`<span>Games Played: ${stats.totalGamesPlayed}</span><br>`)
   $('#bottom').append(`<span>Created At: ${stats.createdAt}</span><br>`)
   $('#bottom').append(`<span>Kills: ${stats.kills}</span><br>`)
@@ -119,7 +121,8 @@ async function viewPlayerImprovement() {
 
   let trackedStats = await getPlayerAllStats(viewingP.id)
 
-  console.log(trackedStats)
+  if(Object.keys(trackedStats).length == 0) return gameNotConnected()
+  console.log(trackedStats, Object.keys(trackedStats).length)
 
   // refine data
   let KperGame = []
@@ -156,4 +159,17 @@ async function viewPlayerImprovement() {
       },
       options: {}
   })
+}
+
+
+function gameNotConnected() {
+  let html = `
+  <center>
+    <span style="margin-top: 100px;">
+      Game account not connected to HRinfo account. If you are the owner of this profile. 
+      Please follow these <a href="../howtoconnectgame">instructions</a>
+    </span>
+  <center>
+  `
+  $('#bottom').html(html)
 }
