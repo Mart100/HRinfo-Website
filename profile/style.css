@@ -88,7 +88,30 @@ body {
 }
 #bottom {
   height: 450px;
+  z-index: 5;
 }
-#myChart {
-  height: 450px;
+
+#sidenav {
+  width: 150px;
+  height: 100%;
+  background-color: rgb(20, 20, 20);
+  z-index: 5;
+  font-size: 17px;
+  text-align: center;
+}
+#sidenav span {
+  margin-left: 0px;
+  display: block;
+  margin-top: 5px;
+  cursor: pointer;
+  border-left: 4px solid rgba(0, 0, 0, 0);
+  border-right: 4px solid rgba(0, 0, 0, 0);
+}
+#sidenav span:hover {
+  border-left: 4px solid rgb(255, 0, 0);
+  border-right: 4px solid rgba(0, 0, 0, 0);
+}
+#sidenav span.selected {
+  border-left: 4px solid rgb(255, 0, 0);
+  border-right: 4px solid rgba(0, 0, 0, 0);
 }
