@@ -8,23 +8,24 @@ async function onload() {
   // get players
   players = await getPlayers()
 
-  // see if token cookie
-  let tokenCookie = getCookie('token')
-  if(tokenCookie != "") {
-    let id = tokenCookie.split('-')[0]
-    viewPlayer(id)
-  }
-
-  // see if player in params
-  let params = window.location.search.substr(1)
-  let playerParam = params.replace('player=', '')
-  if(playerParam != "") viewPlayer(playerParam)
 
   // on search enter
   $('#search').on('keypress', (event) => {
     if(event.key == 'Enter') viewPlayer($('#search').val())
     else searchmodeON()
   })
+
+  // see if player in params
+  let params = window.location.search.substr(1)
+  let playerParam = params.replace('player=', '')
+  if(playerParam != "") return viewPlayer(playerParam)
+
+  // see if token cookie
+  let tokenCookie = getCookie('token')
+  if(tokenCookie != "") {
+    let id = tokenCookie.split('-')[0]
+    viewPlayer(id)
+  }
 
 }
 
