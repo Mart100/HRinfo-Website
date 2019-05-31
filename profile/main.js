@@ -51,6 +51,8 @@ function searchmodeON() {
 function viewPlayer(text) {
   let player = searchPlayer(text)
 
+  window.location.href = `./?player=${player.id}`
+
   viewingP = player
   $('#search').val('')
   $('#search').blur()
