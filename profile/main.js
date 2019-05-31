@@ -10,10 +10,8 @@ async function onload() {
 
   // see if token cookie
   let tokenCookie = getCookie('token')
-  console.log(tokenCookie)
   if(tokenCookie != "") {
     let id = tokenCookie.split('-')[0]
-    console.log(id)
     viewPlayer(id)
   }
 
@@ -51,7 +49,7 @@ function searchmodeON() {
 function viewPlayer(text) {
   let player = searchPlayer(text)
 
-  window.location.href = `./?player=${player.id}`
+  if(window.location.search == "") window.location.href = `./?player=${player.id}`
 
   viewingP = player
   $('#search').val('')
