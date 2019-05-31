@@ -48,8 +48,8 @@ function searchmodeON() {
 
 function viewPlayer(text) {
   let player = searchPlayer(text)
-
-  if(window.location.search == "") window.location.href = `./?player=${player.id}`
+  console.log(window.location.search)
+  if(window.location.search != `?player=${player.id}`) window.location.href = `./?player=${player.id}`
 
   viewingP = player
   $('#search').val('')
