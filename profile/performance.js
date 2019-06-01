@@ -1,4 +1,5 @@
 let trackedStats
+let graph
 
 async function viewPlayerPerformance() {
   // update nav
@@ -7,19 +8,7 @@ async function viewPlayerPerformance() {
   $('#bottom').html('')
 
   trackedStats = await getPlayerAllStats(viewingP.id)
-
   if(Object.keys(trackedStats).length == 0) return gameNotConnected()
-  console.log(trackedStats, Object.keys(trackedStats).length)
-
-  // refine data
-  let KperGame = []
-  let winLoseRate = []
-  for(let day in trackedStats) {
-    let stat = trackedStats[day]
-    KperGame.push(stat.kills / stat.totalGamesPlayed)
-    winLoseRate.push(stat.wins / stat.totalGamesPlayed * 100)
-  }
-
 
   $('#bottom').append('<div style="width: 850px; height: 460px;"><canvas id="myChart" width="500" height="265"></canvas></div>')
   $('#bottom').css('display', 'flex')
@@ -29,65 +18,76 @@ async function viewPlayerPerformance() {
   // create sidenav
   let sidenavHTML = `
   <div id="sidenav">
-    <span class="selected" id="KPG" onclick="killsPerGameGraph()">Kills per game</span>
-    <span class=""         id="WR"  onclick="winRateGraph()">     Win rate %    </span>
+    <span id="KPG">Kills per game</span>
+    <span id="WR">Win rate %</span>
+    <span id="GP">Games played</span>
   </div>
   `
   $('#bottom').prepend(sidenavHTML)
 
-  killsPerGameGraph()
+  // on sidenav click
+  $('#sidenav span').on('click', (event) => {
+    $('#sidenav span').removeClass('selected')
+    $(event.target).addClass('selected')
+
+    if(event.target.id == 'KPG') killsPerGameGraph()
+    if(event.target.id == 'WR') winRateGraph()
+    if(event.target.id == 'GP') gamesPlayedGraph()
+  })
+
+  $('#KPG').trigger('click')
 }
 
 async function killsPerGameGraph() {
-
-  $('#sidenav span').removeClass('selected')
-  $('#sidenav #KPG').addClass('selected')
-
   // refine data
-  let KperGame = []
+  let data = []
+  let previous = {kills: 0, totalGamesPlayed: 0}
   for(let day in trackedStats) {
     let stat = trackedStats[day]
-    KperGame.push(stat.kills / stat.totalGamesPlayed)
+    let now = {kills: stat.kills - previous.kills, totalGamesPlayed: stat.totalGamesPlayed - previous.totalGamesPlayed}
+    if(now.totalGamesPlayed == 0) now.totalGamesPlayed = 1
+    data.push(now.kills / now.totalGamesPlayed)
+    previous = {kills: stat.kills, totalGamesPlayed: stat.totalGamesPlayed}
   }
-
-  let myLineChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: Object.keys(trackedStats),
-      datasets: [{
-        label: 'Kills per game',
-        backgroundColor: '#FF6565',
-        borderColor: 'red',
-        fill: false,
-        data: KperGame
-      }]
-    },
-    options: {}
-  })
+  createGraph(data, 'Kills per game')
 }
 
 async function winRateGraph() {
-
-  $('#sidenav span').removeClass('selected')
-  $('#sidenav #WG').addClass('selected')
-
   // refine data
-  let winLoseRate = []
+  let data = []
   for(let day in trackedStats) {
     let stat = trackedStats[day]
-    winLoseRate.push(stat.wins / stat.totalGamesPlayed * 100)
+    data.push(stat.wins / stat.totalGamesPlayed * 100)
   }
+  createGraph(data, 'Win rate %')
+}
 
-  let myLineChart = new Chart(ctx, {
+async function gamesPlayedGraph() {
+  // refine data
+  let data = []
+  let previous = 0
+  for(let day in trackedStats) {
+    let stat = trackedStats[day]
+    data.push(stat.totalGamesPlayed - previous)
+    previous = stat.totalGamesPlayed
+  }
+  createGraph(data, 'Games Played')
+}
+
+function createGraph(data, label) {
+
+  if(graph != undefined) graph.destroy()
+
+  graph = new Chart(ctx, {
     type: 'line',
     data: {
       labels: Object.keys(trackedStats),
       datasets: [{
-        label: 'Win rate %',
-        backgroundColor: '#69FF46',
-        borderColor: 'green',
+        label: label,
+        backgroundColor: 'red',
+        borderColor: 'red',
         fill: false,
-        data: winLoseRate
+        data: data
       }]
     },
     options: {}
