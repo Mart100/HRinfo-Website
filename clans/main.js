@@ -21,12 +21,12 @@ $(() => {
   })
 
   let text = `
-  <span style="position: relative; top: 25px;">
+  <span style="position: relative; top: 25px; ">
     To have your own clan added here,<br> Invite this discord bot to your clan discord server!<br>
     <a href="https://discordapp.com/oauth2/authorize?client_id=578905640181825556&permissions=67585&scope=bot">Bot invite</a>
   </span>
   `
-  $('#clans').append(`<div style="color: white; text-align: center;" class="clan">${text}</div>`)
+  $('#clans').append(`<div style="color: white; text-align: center; cursor: default;" class="clan">${text}</div>`)
 })
 
 function clanPointFunc(clan) {
@@ -48,6 +48,7 @@ function addClan(clan) {
     <span class="discordMembers">Discord Members: ${clan.discordMemberCount}</span>
     <span class="tag">Tag: ${clan.tag}</span>
     <span class="points">Points: ${clan.points}</span>
+    <span class="click">click for more info</span>
   </div>
   `
   $('#clans').append(html)

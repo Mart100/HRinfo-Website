@@ -76,7 +76,14 @@ body {
   width: 150px;
   font-size: 15px;
 }
-
+.clan .click {
+  position: absolute;
+  color: rgb(175, 175, 175);
+  margin-left: 540px;
+  margin-top: 70px;
+  width: 150px;
+  font-size: 15px;
+}
 .clan .discordMembers {
   position: absolute;
   color: white;
