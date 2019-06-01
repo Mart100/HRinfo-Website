@@ -33,3 +33,9 @@ function getPlayingCount() {
     $.get(`https://hrinfo-api.herokuapp.com/playingcount`, (data) => { resolve(data) })
   })
 }
+
+function getTournaments() {
+  return new Promise((resolve, reject) => {
+    $.get(`https://hrinfo-api.herokuapp.com/tournaments`, (data) => { resolve(data) })
+  })
+}
