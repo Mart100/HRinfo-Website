@@ -78,10 +78,19 @@ function createGraph(data, label) {
 
   if(graph != undefined) graph.destroy()
 
+  // get labels
+  let timeStamps = Object.keys(trackedStats)
+  let labels = []
+  for(let i in timeStamps) {
+    let time = new Date((timeStamps[i]-1)*24*60*60*1000).toDateString()
+    let text = time.split(' ')[1] + ' ' + time.split(' ')[2]
+    labels.push(text)
+  }
+
   graph = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: Object.keys(trackedStats),
+      labels: labels,
       datasets: [{
         label: label,
         backgroundColor: 'red',

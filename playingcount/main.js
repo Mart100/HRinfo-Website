@@ -27,32 +27,32 @@ async function load() {
 function LHgraph() {
   let cuttedPlayingCount = Object.values(playingCount).slice(-6)
   let refined = refineData(cuttedPlayingCount)
-  createGraph(refined.data, refined.timeStamps)
+  createGraph(refined.data, refined.timeStamps, 'hour')
 }
 function LDgraph() {
   let cuttedPlayingCount = Object.values(playingCount).slice(-6*24)
   let refined = refineData(cuttedPlayingCount)
-  createGraph(refined.data, refined.timeStamps)
+  createGraph(refined.data, refined.timeStamps, 'day')
 }
 function LWgraph() {
   let cuttedPlayingCount = Object.values(playingCount).slice(-6*24*7)
   let refined = refineData(cuttedPlayingCount)
-  createGraph(refined.data, refined.timeStamps)
+  createGraph(refined.data, refined.timeStamps, 'week')
 }
 function LMgraph() {
   let cuttedPlayingCount = Object.values(playingCount).slice(-6*24*7*31)
   let refined = refineData(cuttedPlayingCount)
-  createGraph(refined.data, refined.timeStamps)
+  createGraph(refined.data, refined.timeStamps, 'month')
 }
 function LYgraph() {
   let cuttedPlayingCount = Object.values(playingCount).slice(-6*24*7*31*12)
   let refined = refineData(cuttedPlayingCount)
-  createGraph(refined.data, refined.timeStamps)
+  createGraph(refined.data, refined.timeStamps, 'year')
 }
 function ATgraph() {
   let cuttedPlayingCount = Object.values(playingCount)
   let refined = refineData(cuttedPlayingCount)
-  createGraph(refined.data, refined.timeStamps)
+  createGraph(refined.data, refined.timeStamps, 'all ')
 }
 
 function refineData(unrefinedData) {
@@ -68,11 +68,16 @@ function refineData(unrefinedData) {
   return {data: data, timeStamps: timeStamps}
 }
 
-function createGraph(data, timeStamps) {
+function createGraph(data, timeStamps, timespan) {
   // timeStamps to labels
   let labels = []
   let currentTime = Math.floor(Date.now() / (1000*60*10))
-  for(let i in timeStamps) labels.push(((currentTime - timeStamps[i]) * 10) + 'm ago')
+  for(let i in timeStamps) {
+    let time = new Date(timeStamps[i]*10*60*1000)
+    let text = time.getHours()+':'+time.getMinutes()
+    if(time.getMinutes() < 10) text += '0'
+    labels.push(text)
+  }
 
   if(chart != undefined) chart.destroy()
 
