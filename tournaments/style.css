@@ -19,10 +19,11 @@ body {
   width: 250px;
   height: 250px;
   display: inline-block;
-  text-align: left;
+  text-align: middle;
   color: white;
-  background-color: rgb(20, 20, 20)
+  background-color: rgb(20, 20, 20);
+  border-radius: 10px;
 }
 .tournament span {
-  margin: 10px;
+  margin-top: 10px;
 }
