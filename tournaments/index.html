@@ -10,11 +10,22 @@
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140200727-1"></script>
 
+    <!-- AdSense -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7537311431691156",
+        enable_page_level_ads: true
+      });
+    </script>
+
     <script src="../scripts/database.js"></script>
     <script src="../scripts/cookies.js"></script>
     <script src="../scripts/analytics.js"></script>
-    <script src="main.js"></script>
-    <link href="style.css" rel="stylesheet">
+    <script src="tournamentList.js"></script>
+    <script src="tournament.js"></script>
+    <link href="tournamentList.css" rel="stylesheet">
+    <link href="tournament.css" rel="stylesheet">
     <link href="../styles/nav.css" rel="stylesheet">
   </head>
   <body>
@@ -24,6 +35,7 @@
       <a href="../map">Map</a>
       <a href="../clans">Clans</a>
       <a href="../skins">Skins</a>
+      <a href="../tournaments" class="selected">Tournaments</a>
       <a href="../leaderboard">Leaderboard</a>
       <a href="../profile">Profile</a>
       <div class="dropdown">
@@ -35,9 +47,7 @@
         </div>
       </div>
     </div>
-
     <div id="tournaments">
-      
     </div>
   </body>
 </html>
