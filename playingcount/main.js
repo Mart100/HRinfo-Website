@@ -14,9 +14,9 @@ async function load() {
     $(event.target).addClass('selected')
     if(event.target.id == 'LH') LHgraph()
     if(event.target.id == 'LD') LDgraph()
-    if(event.target.id == 'LW') LDgraph()
-    if(event.target.id == 'LM') LDgraph()
-    if(event.target.id == 'LY') LDgraph()
+    if(event.target.id == 'LW') LWgraph()
+    if(event.target.id == 'LM') LMgraph()
+    if(event.target.id == 'LY') LYgraph()
     if(event.target.id == 'AT') ATgraph()
   })
 
@@ -52,7 +52,7 @@ function LYgraph() {
 function ATgraph() {
   let cuttedPlayingCount = Object.values(playingCount)
   let refined = refineData(cuttedPlayingCount)
-  createGraph(refined.data, refined.timeStamps, 'all ')
+  createGraph(refined.data, refined.timeStamps, 'all')
 }
 
 function refineData(unrefinedData) {
@@ -74,9 +74,16 @@ function createGraph(data, timeStamps, timespan) {
   let currentTime = Math.floor(Date.now() / (1000*60*10))
   for(let i in timeStamps) {
     let time = new Date(timeStamps[i]*10*60*1000)
-    let text = time.getHours()+':'+time.getMinutes()
-    if(time.getMinutes() < 10) text += '0'
-    labels.push(text)
+    if(timespan == 'hour' || timespan == 'day') {
+      let text = time.getHours()+':'+time.getMinutes()
+      if(time.getMinutes() < 10) text += '0'
+      labels.push(text)
+    }
+    if(timespan == 'week' || timespan == 'month' || timespan == 'year' || timespan == 'all') {
+      let text = time.toDateString()
+      text = text.split(' ').slice(1).join(' ')
+      labels.push(text)
+    }
   }
 
   if(chart != undefined) chart.destroy()
