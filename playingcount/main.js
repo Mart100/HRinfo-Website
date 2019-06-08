@@ -36,21 +36,25 @@ function LDgraph() {
 }
 function LWgraph() {
   let cuttedPlayingCount = Object.values(playingCount).slice(-6*24*7)
+  cuttedPlayingCount = thinData(cuttedPlayingCount)
   let refined = refineData(cuttedPlayingCount)
   createGraph(refined.data, refined.timeStamps, 'week')
 }
 function LMgraph() {
   let cuttedPlayingCount = Object.values(playingCount).slice(-6*24*7*31)
+  cuttedPlayingCount = thinData(cuttedPlayingCount)
   let refined = refineData(cuttedPlayingCount)
   createGraph(refined.data, refined.timeStamps, 'month')
 }
 function LYgraph() {
   let cuttedPlayingCount = Object.values(playingCount).slice(-6*24*7*31*12)
+  cuttedPlayingCount = thinData(cuttedPlayingCount)
   let refined = refineData(cuttedPlayingCount)
   createGraph(refined.data, refined.timeStamps, 'year')
 }
 function ATgraph() {
   let cuttedPlayingCount = Object.values(playingCount)
+  cuttedPlayingCount = thinData(cuttedPlayingCount)
   let refined = refineData(cuttedPlayingCount)
   createGraph(refined.data, refined.timeStamps, 'all')
 }
@@ -66,6 +70,17 @@ function refineData(unrefinedData) {
     timeStamps.push(hm.recordedAt)
   }
   return {data: data, timeStamps: timeStamps}
+}
+
+function thinData(data) {
+  let amount = Math.floor(data.length/500)
+  let newData = []
+  for(let a in data) {
+    if(a % amount == 0) {
+      newData.push(data[a])
+    }
+  }
+  return newData
 }
 
 function createGraph(data, timeStamps, timespan) {
